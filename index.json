@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "generated": "2026-11-20T16:43:05Z",
+  "packs": [
+    {
+      "id": "end-of-day",
+      "name": "End-of-day nudge",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "At the end of your day he suggests wrapping up, with what you got done today.",
+      "icon": "🌆",
+      "minApp": "2.4.0",
+      "kind": "reminders",
+      "file": "dist/end-of-day-1.0.0.zip",
+      "size": 624,
+      "sha256": "8aead1cd9a03fb29eeae785b0e408a268e62638170db278553694012b9c9b238",
+      "json_sha256": "9c4c7b9efc5f40c2c82a7ddbabfd819dbf089f4b0b5ae66a1ec30a29fcb9bed9"
+    },
+    {
+      "id": "eye-break",
+      "name": "Eye break (20-20-20)",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "Every 20 minutes, look at something about 20 feet (6 m) away for 20 seconds.",
+      "icon": "👀",
+      "minApp": "2.4.0",
+      "kind": "reminders",
+      "file": "dist/eye-break-1.0.0.zip",
+      "size": 556,
+      "sha256": "40bc3b05df37b80ca6347ce5d80f217c0e478e6927fe87890febbf52f2f503ea",
+      "json_sha256": "448542abef2bb51fce44f7a84862a1a6fae438d5e92283300cd0b059ead9f58c"
+    },
+    {
+      "id": "pomodoro",
+      "name": "Pomodoro timer",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "Focus in rounds with short breaks. He keeps quiet while you focus and naps during breaks.",
+      "icon": "🍅",
+      "minApp": "2.4.0",
+      "kind": "routine",
+      "file": "dist/pomodoro-1.0.0.zip",
+      "size": 829,
+      "sha256": "41bb990b471bdfa0675d9c676cc38a757aa8dcc3137d6d97a3f5e72d6e3d34a1",
+      "json_sha256": "6cfb8c324809cd673dd5915fe517bc9358f15ea8d07d6d5a79d30ee8b25af435"
+    },
+    {
+      "id": "stretch",
+      "name": "Stretch reminder",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "Every so often he stretches and asks you to join in.",
+      "icon": "🙆",
+      "minApp": "2.4.0",
+      "kind": "reminders",
+      "file": "dist/stretch-1.0.0.zip",
+      "size": 594,
+      "sha256": "5155973f4f1a18ac6df1b1a02b884233c4059c40623fccee27d6fa15f1f8eae3",
+      "json_sha256": "f434b42bb40aba712c58e203c706a231a21d2bf47e21946937b5f10f6035c656"
+    },
+    {
+      "id": "water",
+      "name": "Water reminder",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "Reminds you to drink some water and counts your glasses for the day.",
+      "icon": "💧",
+      "minApp": "2.4.0",
+      "kind": "reminders",
+      "file": "dist/water-1.0.0.zip",
+      "size": 574,
+      "sha256": "aa62e7312a0308064593861225ec8b580573f3bef7beeb26faac0d290b8a29e4",
+      "json_sha256": "78abdd7f7556d06fcc5fe6f9454e7dc5f3d760b1475c875db6cf1352cf4386e7"
+    }
+  ]
+}

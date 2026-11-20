@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "id": "end-of-day",
+  "name": "End-of-day nudge",
+  "version": "1.0.0",
+  "author": "Assistail",
+  "description": "At the end of your day he suggests wrapping up, with what you got done today.",
+  "minApp": "2.4.0",
+  "icon": "🌆",
+  "settings": {
+    "time": { "type": "time", "label": "Nudge me at", "default": "18:00" },
+    "days": { "type": "choice", "label": "On", "default": "weekdays",
+              "choices": [ { "value": "weekdays", "label": "Weekdays" }, { "value": "daily", "label": "Every day" } ] }
+  },
+  "reminders": [
+    {
+      "at": "{time}",
+      "days": "{days}",
+      "quietWhen": ["fullscreen", "dnd"],
+      "snooze": 15,
+      "attention": 2,
+      "do": [
+        { "trick": "wave" },
+        { "say": "Time to wrap up, {name}? 🌆\nToday: ✅ {count:claude-tasks} Claude Code tasks · 🍅 {count:tomatoes}", "seconds": 30 }
+      ],
+      "onClick": [ { "say": "Have a good evening! 👋" } ]
+    }
+  ]
+}

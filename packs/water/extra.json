@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "id": "water",
+  "name": "Water reminder",
+  "version": "1.0.0",
+  "author": "Assistail",
+  "description": "Reminds you to drink some water and counts your glasses for the day.",
+  "minApp": "2.4.0",
+  "icon": "💧",
+  "topics": ["water"],
+  "settings": {
+    "every": { "type": "minutes", "label": "Remind me every", "default": 90, "min": 20, "max": 240 }
+  },
+  "reminders": [
+    {
+      "every": "{every}",
+      "activeTimeOnly": true,
+      "quietWhen": ["fullscreen", "dnd", "focus", "chat"],
+      "snooze": 15,
+      "attention": 2,
+      "do": [
+        { "trick": "look_up" },
+        { "say": ["Time for some water 💧 Click me when you've had a glass.", "Sip break? 💧 Click me once you've had some water."] }
+      ],
+      "onClick": [ { "count": "water" }, { "say": "💧 That's {count:water} today. Keep it up!" } ]
+    }
+  ]
+}

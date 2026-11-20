@@ -1,0 +1,38 @@
+{
+  "format": 1,
+  "id": "pomodoro",
+  "name": "Pomodoro timer",
+  "version": "1.0.0",
+  "author": "Assistail",
+  "description": "Focus in rounds with short breaks. He keeps quiet while you focus and naps during breaks.",
+  "minApp": "2.4.0",
+  "icon": "🍅",
+  "topics": ["break"],
+  "settings": {
+    "focus":  { "type": "minutes", "label": "Focus",        "default": 25, "min": 5, "max": 120 },
+    "short":  { "type": "minutes", "label": "Short break",  "default": 5,  "min": 1, "max": 30 },
+    "long":   { "type": "minutes", "label": "Long break",   "default": 15, "min": 5, "max": 60 },
+    "rounds": { "type": "number",  "label": "Long break after", "default": 4, "min": 2, "max": 8, "unit": "rounds" }
+  },
+  "routine": {
+    "label": "Pomodoro",
+    "steps": [
+      {
+        "id": "focus", "name": "Focus", "minutes": "{focus}", "focus": true, "confirm": true, "escalate": true,
+        "start": [ { "trick": "wave" }, { "say": "Focus time! 🍅 {minutes} minutes. I'll keep quiet.", "attention": 1 } ],
+        "nudge": [ { "say": "Ready for the next focus round? 🍅 Click me to start." } ],
+        "end": [ { "count": "tomatoes" } ]
+      },
+      {
+        "id": "break", "name": "Break", "minutes": "{short}", "pose": "sleep", "exceptEvery": "{rounds}",
+        "start": [ { "trick": "happy" }, { "say": "🍅 Round done! Take a {minutes}-minute break ☕" } ],
+        "end": [ { "trick": "jump" }, { "say": "Break's over! 💪 Click me to start the next focus.", "seconds": 60, "attention": 3 } ]
+      },
+      {
+        "id": "long", "name": "Long break", "minutes": "{long}", "pose": "sleep", "every": "{rounds}",
+        "start": [ { "trick": "happy" }, { "say": "🍅 {count:tomatoes} today! Long break: {minutes} minutes 🌴" } ],
+        "end": [ { "trick": "jump" }, { "say": "Long break's over! 💪 Click me when you're ready.", "seconds": 60, "attention": 3 } ]
+      }
+    ]
+  }
+}

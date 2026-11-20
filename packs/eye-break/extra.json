@@ -1,0 +1,27 @@
+{
+  "format": 1,
+  "id": "eye-break",
+  "name": "Eye break (20-20-20)",
+  "version": "1.0.0",
+  "author": "Assistail",
+  "description": "Every 20 minutes, look at something about 20 feet (6 m) away for 20 seconds.",
+  "minApp": "2.4.0",
+  "icon": "👀",
+  "topics": ["eyes"],
+  "settings": {
+    "every": { "type": "minutes", "label": "Remind me every", "default": 20, "min": 10, "max": 120 }
+  },
+  "reminders": [
+    {
+      "every": "{every}",
+      "activeTimeOnly": true,
+      "quietWhen": ["fullscreen", "dnd", "focus", "chat"],
+      "snooze": 5,
+      "attention": 1,
+      "do": [
+        { "trick": "look_up" },
+        { "say": ["Eye break! 👀 Look at something far away for 20 seconds.", "Rest your eyes: find something across the room and look at it for 20 s 👀"], "seconds": 20 }
+      ]
+    }
+  ]
+}

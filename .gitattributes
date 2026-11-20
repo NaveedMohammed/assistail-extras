@@ -1,0 +1,5 @@
+# The signed files must stay byte-for-byte as the maintainer built them.
+index.json -text
+index.json.sig -text
+*.zip binary
+packs/**/*.json text eol=lf

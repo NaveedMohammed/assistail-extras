@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "id": "stretch",
+  "name": "Stretch reminder",
+  "version": "1.0.0",
+  "author": "Assistail",
+  "description": "Every so often he stretches and asks you to join in.",
+  "minApp": "2.4.0",
+  "icon": "🙆",
+  "topics": ["stretch"],
+  "settings": {
+    "every": { "type": "minutes", "label": "Remind me every", "default": 60, "min": 15, "max": 240 }
+  },
+  "reminders": [
+    {
+      "every": "{every}",
+      "activeTimeOnly": true,
+      "quietWhen": ["fullscreen", "dnd", "focus", "chat"],
+      "snooze": 10,
+      "attention": 3,
+      "do": [
+        { "trick": "stretch_yawn" },
+        { "say": ["Stretch with me, {name}? 🙆", "Up you get! A quick stretch? 🦁", "Shoulders up… and down. Ahh, better. Your turn!"] }
+      ],
+      "onClick": [ { "say": ["Nice! 💪", "Feels good, right? 😌"] } ]
+    }
+  ]
+}

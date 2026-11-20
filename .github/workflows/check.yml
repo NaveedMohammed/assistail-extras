@@ -1,0 +1,29 @@
+# Validates the packs with the same rules as the app. Pull requests may only touch packs/<id>/ folders:
+# index.json, index.json.sig and dist/ are rebuilt and signed by the maintainer.
+name: Check packs
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Only pack folders changed
+        if: github.event_name == 'pull_request'
+        shell: bash
+        run: |
+          bad=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -v '^packs/' || true)
+          if [ -n "$bad" ]; then echo "Please only change files in packs/<id>/. Also changed:"; echo "$bad"; exit 1; fi
+      - uses: actions/checkout@v4
+        with:
+          repository: NaveedMohammed/assistail
+          path: assistail-app
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Validate packs
+        run: dotnet run --project assistail-app/tools/ExtrasCatalog -c Release -- check .
