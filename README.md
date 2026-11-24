@@ -1,5 +1,10 @@
 # Assistail extras
 
+<p>
+  <a href="https://github.com/NaveedMohammed/assistail-extras/releases"><img src="https://img.shields.io/github/downloads/NaveedMohammed/assistail-extras/total?label=buddy%20downloads&color=e8833a" alt="Buddy downloads"></a>
+  <a href="https://github.com/NaveedMohammed/assistail/releases/latest"><img src="https://img.shields.io/github/v/release/NaveedMohammed/assistail?label=Assistail&color=e8833a" alt="Latest Assistail release"></a>
+</p>
+
 Optional packs for [Assistail](https://github.com/NaveedMohammed/assistail), the taskbar buddy: reminders, timers and
 routines. Install them from inside the app (right-click your buddy → **Extras** → **Manage extras…** → **Available**), or
 download a pack's zip from `dist/` and drop it on your buddy.
@@ -19,11 +24,13 @@ pack can't run programs or reach the internet.
 
 ## Buddies
 
+<p align="center"><img src="images/cat.gif" width="260" alt="The calico cat buddy waving with the plaid cloth tied on his paw"></p>
+
 Other buddies to swap in for the lion (Assistail 2.5.0 or newer: *Buddy → Get more buddies…*).
 
 | Buddy | What he's like |
 |---|---|
-| 🐱 [Calico cat](buddies/cat.json) | A calico kitten with a plaid cloth tied on his paw. He tries to pull it off, licks your pointer, and runs away when you try to put it back on. |
+| 🐱 [Calico cat](buddies/cat.json) <br> [![Downloads](https://img.shields.io/github/downloads/NaveedMohammed/assistail-extras/buddy-cat-1.0.0/total?label=downloads&color=e8833a)](https://github.com/NaveedMohammed/assistail-extras/releases/tag/buddy-cat-1.0.0) | A calico kitten with a plaid cloth tied on his paw. He tries to pull it off, licks your pointer, and runs away when you try to put it back on. |
 
 A buddy is a set of animation frames, so its zip is too big for the repo: it's a release asset
 (`releases/download/buddy-<id>-<version>/<id>-<version>.zip`), and `buddies/<id>.json` records its size and SHA-256.
