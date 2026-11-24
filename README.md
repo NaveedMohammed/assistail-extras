@@ -17,6 +17,18 @@ pack can't run programs or reach the internet.
 | 👀 [Eye break (20-20-20)](packs/eye-break/extra.json) | Every 20 minutes, look at something about 6 m away for 20 seconds. |
 | 🌆 [End-of-day nudge](packs/end-of-day/extra.json) | At the end of your day he suggests wrapping up, with what you got done. |
 
+## Buddies
+
+Other buddies to swap in for the lion (Assistail 2.5.0 or newer: *Buddy → Get more buddies…*).
+
+| Buddy | What he's like |
+|---|---|
+| 🐱 [Calico cat](buddies/cat.json) | A calico kitten with a plaid cloth tied on his paw. He tries to pull it off, licks your pointer, and runs away when you try to put it back on. |
+
+A buddy is a set of animation frames, so its zip is too big for the repo: it's a release asset
+(`releases/download/buddy-<id>-<version>/<id>-<version>.zip`), and `buddies/<id>.json` records its size and SHA-256.
+The app installs buddies only from this signed catalog, and checks every file in the zip before it opens any of them.
+
 ## How the catalog works
 
 - `packs/<id>/extra.json`: the packs, as people write them.

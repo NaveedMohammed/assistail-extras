@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "generated": "2026-11-20T16:43:05Z",
+  "generated": "2026-11-24T02:43:15Z",
   "packs": [
     {
       "id": "end-of-day",
@@ -71,6 +71,20 @@
       "size": 574,
       "sha256": "aa62e7312a0308064593861225ec8b580573f3bef7beeb26faac0d290b8a29e4",
       "json_sha256": "78abdd7f7556d06fcc5fe6f9454e7dc5f3d760b1475c875db6cf1352cf4386e7"
+    }
+  ],
+  "buddies": [
+    {
+      "id": "cat",
+      "name": "Calico cat",
+      "version": "1.0.0",
+      "author": "Assistail",
+      "description": "A calico kitten with a plaid cloth tied on his paw. He tries to pull it off, licks your pointer, and runs away when you try to put it back on.",
+      "icon": "🐱",
+      "minApp": "2.5.0",
+      "url": "https://github.com/NaveedMohammed/assistail-extras/releases/download/buddy-cat-1.0.0/cat-1.0.0.zip",
+      "size": 17981530,
+      "sha256": "95a0c9326cee30890efc50cd4d7db56383f5c4de3fe04a781202ab5163b78777"
     }
   ]
 }
